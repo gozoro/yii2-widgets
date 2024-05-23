@@ -1,0 +1,23 @@
+{
+	"name": "gozoro/yii2-widgets",
+	"description": "Yii2 widgets for Bootstrap 3.",
+	"keywords":["yii2", "widgets", "bootstrap", "bootstrap3", "datepicker"],
+	"homepage": "https://github.com/gozoro/yii2-widgets",
+	"type": "yii2-extension",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Gozoro",
+			"email": "gozoro@yandex.ru"
+		}
+	],
+	"require": {
+		"php": ">=5.5.9",
+		"yiisoft/yii2": "~2.0.0"
+	},
+	"autoload": {
+		"psr-4": {
+			"gozoro\\yii2\\widgets\\": "src"
+		}
+	}
+}
