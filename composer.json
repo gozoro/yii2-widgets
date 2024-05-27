@@ -1,7 +1,7 @@
 {
 	"name": "gozoro/yii2-widgets",
 	"description": "Yii2 widgets for Bootstrap 3.",
-	"keywords":["yii2", "widgets", "bootstrap", "bootstrap3", "datepicker"],
+	"keywords":["yii2", "widgets", "widget", "bootstrap", "bootstrap3", "datepicker", "autocompleter"],
 	"homepage": "https://github.com/gozoro/yii2-widgets",
 	"type": "yii2-extension",
 	"license": "MIT",
@@ -15,7 +15,8 @@
 		"php": ">=5.5.9",
 		"yiisoft/yii2": "~2.0.0",
 		"bower-asset/bootstrap-datepicker": "^1.7",
-		"gozoro/yii2-helpers": "~1.0.0"
+		"gozoro/yii2-helpers": "~1.0.0",
+		"gozoro/jquery-autocompleter": "~2.0.0"
 
 	},
 	"autoload": {
