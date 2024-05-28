@@ -1,6 +1,6 @@
 <?php
 
-namespace app\widgets;
+namespace gozoro\yii2\widgets;
 
 use Yii;
 use gozoro\yii2\widgets\assets\AutocompleterAsset;
