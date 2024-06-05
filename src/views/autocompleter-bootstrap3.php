@@ -19,6 +19,6 @@ $value = $attributes['value'];
 <script>
 	$(document).ready(function()
 	{
-		$('#<?=$id?>').autocompleter(<?=$jsVariants?>, <?=$jsOptions?> );
+		$('#<?=$id?>').autocompleter(<?=$jsItems?>, <?=$jsOptions?> );
 	});
 </script>

@@ -36,16 +36,9 @@ use gozoro\yii2\helpers\Json;
  */
 class Datepicker extends BaseWidget
 {
-	public $datepickerView = 'datepicker-bootstrap3';
-	public $datepickerRangeView = 'datepicker-range-bootstrap3';
+	public $widgetView = 'datepicker-bootstrap3';
+	public $widgetRangeView = 'datepicker-range-bootstrap3';
 
-
-	public function init()
-	{
-		parent::init();
-		$this->attributes = \array_merge( $this->getDefaultAttributes(), $this->attributes );
-		$this->clientOptions = \array_merge( $this->getDefaultClientOptions(), $this->clientOptions );
-	}
 
 	public function getDefaultAttributes()
 	{
@@ -83,7 +76,7 @@ class Datepicker extends BaseWidget
 				throw new \yii\base\Exception("Invalid datepicker attribute 'value'. Value must be string.");
 			}
 
-			return $this->render($this->datepickerView, ['attributes' => $this->attributes, 'jsOptions' => $jsOptions]);
+			return $this->render($this->widgetView, ['attributes' => $this->attributes, 'jsOptions' => $jsOptions]);
 		}
 		elseif(is_array($name) and isset($name[0]) and isset($name[1]))
 		{
@@ -104,7 +97,7 @@ class Datepicker extends BaseWidget
 				}
 			}
 
-			return $this->render($this->datepickerRangeView, ['attributesBegin' => $attributesBegin, 'attributesEnd' => $attributesEnd, 'jsOptions' => $jsOptions]);
+			return $this->render($this->widgetRangeView, ['attributesBegin' => $attributesBegin, 'attributesEnd' => $attributesEnd, 'jsOptions' => $jsOptions]);
 		}
 		else
 		{

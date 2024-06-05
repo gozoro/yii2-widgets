@@ -4,20 +4,11 @@ namespace gozoro\yii2\widgets;
 
 use Yii;
 use app\widgets\assets\FileInputAsset;
-use yii\helpers\ArrayHelper;
+
 
 class FileInput extends BaseWidget
 {
-	public $fileinputView = 'fileinput-bootstrap3';
-
-
-
-	public function init()
-	{
-		parent::init();
-		$this->attributes = ArrayHelper::merge( $this->getDefaultAttributes(), $this->attributes );
-		$this->clientOptions = ArrayHelper::merge( $this->getDefaultClientOptions(), $this->clientOptions );
-	}
+	public $widgetView = 'fileinput-bootstrap3';
 
 
 	public function getDefaultAttributes()
@@ -66,7 +57,7 @@ class FileInput extends BaseWidget
 
 		$buttonAttributes = $this->attributes;
 
-		return $this->render($this->fileinputView, [
+		return $this->render($this->widgetView, [
 			'content'            => $content,
 			'inputAttributes'    => $inputAttributes,
 			'buttonAttributes'   => $buttonAttributes,

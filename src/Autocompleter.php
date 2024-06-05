@@ -7,28 +7,26 @@ use gozoro\yii2\widgets\assets\AutocompleterAsset;
 use gozoro\yii2\helpers\Json;
 
 /**
- * Autocompleter widget based on gozoro\jquery-autocompleter.
+ * Autocompleter widget based on gozoro/jquery-autocompleter.
  */
 class Autocompleter extends BaseWidget
 {
-	public $autocompleterView = 'autocompleter-bootstrap3';
+	public $widgetView = 'autocompleter-bootstrap3';
 
-	public $variants;
+	public $items;
 
 	public function init()
 	{
 		parent::init();
-		$this->attributes = \array_merge( $this->getDefaultAttributes(), $this->attributes );
-		$this->clientOptions = \array_merge( $this->getDefaultClientOptions(), $this->clientOptions );
 
-		if(isset($this->attributes['variants']))
+		if(isset($this->attributes['items']))
 		{
-			$this->variants = $this->attributes['variants'];
-			unset($this->attributes['variants']);
+			$this->items = $this->attributes['items'];
+			unset($this->attributes['items']);
 		}
 		else
 		{
-			$this->variants = [];
+			$this->items = [];
 		}
 	}
 
@@ -51,15 +49,15 @@ class Autocompleter extends BaseWidget
 		AutocompleterAsset::register( Yii::$app->view );
 		$jsOptions = Json::optionsEncode($this->clientOptions);
 
-		if(is_array($this->variants))
+		if(is_array($this->items))
 		{
-			$jsVariants = json_encode($this->variants);
+			$jsItems = json_encode($this->items);
 		}
-		elseif(is_string($this->variants))
+		elseif(is_string($this->items))
 		{
-			$jsVariants = '"'.$this->variants.'"'; // ajax url
+			$jsItems = '"'.$this->items.'"'; // ajax url
 		}
 
-		return $this->render($this->autocompleterView, ['attributes' => $this->attributes, 'jsVariants'=>$jsVariants, 'jsOptions' => $jsOptions]);
+		return $this->render($this->widgetView, ['attributes' => $this->attributes, 'jsItems'=>$jsItems, 'jsOptions' => $jsOptions]);
 	}
 }

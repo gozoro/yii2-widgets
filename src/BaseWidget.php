@@ -22,12 +22,19 @@ class BaseWidget extends Widget
 	 */
 	public $clientOptions;
 
+	/**
+	 * Widget template view
+	 * @var string
+	 */
+	public $widgetView;
+
 	public function init()
 	{
 		parent::init();
 
 		if(\is_null($this->attributes))
 			$this->attributes = [];
+
 
 
 		if(\is_null($this->clientOptions))
@@ -49,6 +56,10 @@ class BaseWidget extends Widget
 		{
 			$this->attributes['value'] = null;
 		}
+
+
+		$this->attributes = \array_merge( $this->getDefaultAttributes(), $this->attributes );
+		$this->clientOptions = \array_merge( $this->getDefaultClientOptions(), $this->clientOptions );
 	}
 
 
