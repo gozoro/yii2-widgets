@@ -7,7 +7,7 @@ use app\widgets\assets\MultiSelectorAsset;
 use gozoro\yii2\helpers\Json;
 
 /**
- * Multi selector widget.
+ * Multi selector widget based on gozoro/jquery-multiselect
  *
  *
  * ```php
