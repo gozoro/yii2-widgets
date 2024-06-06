@@ -8,6 +8,37 @@ use gozoro\yii2\helpers\Json;
 
 /**
  * Autocompleter widget based on gozoro/jquery-autocompleter.
+ *
+ * ```php
+ * Autocompleter::widget([
+ * 	'name' => 'county',
+ * 	'items' => [
+ * 		"Afghanistan",
+ * 		"Albania",
+ * 		"Algeria",
+ * 		"Andorra",
+ * 		"Angola",
+ * 		"Antigua and Barbuda",
+ * 		"Argentina",
+ * 		"Armenia",
+ * 		"Australia",
+ * 		"Austria",
+ * 		"Azerbaijan"
+ * 		],
+ * 	'clientOptions'=>[
+ * 		'value' => 'function(item, index){return index;}'
+ * 		]
+ * ]);
+ * ```
+ *
+ * Default options:
+ *
+ * ```php
+ * [
+ * 	'autocomplete'=> 'off',
+ * 	'class' => 'form-control',
+ * ]
+ * ```
  */
 class Autocompleter extends BaseWidget
 {
