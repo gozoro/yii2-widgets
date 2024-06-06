@@ -5,7 +5,7 @@ namespace gozoro\yii2\widgets\assets;
 use yii\web\AssetBundle;
 
 /**
- * Bootstrap 3 autocompleter asset
+ * Aautocompleter asset
  */
 class AutocompleterAsset extends AssetBundle
 {
@@ -19,7 +19,8 @@ class AutocompleterAsset extends AssetBundle
 		'css/jquery.autocompleter.min.css'
 	];
 
-	public $jsOptions = ['position'=>\yii\web\view::POS_HEAD];
+	public $jsOptions  = ['position'=>\yii\web\view::POS_HEAD];
+	public $cssOptions = ['position'=>\yii\web\view::POS_HEAD];
 
     public $depends = [
 		'yii\web\JqueryAsset',

@@ -5,7 +5,7 @@ namespace gozoro\yii2\widgets\assets;
 use yii\web\AssetBundle;
 
 /**
- * Bootstrap 3 datepicker asset
+ * Datepicker asset
  */
 class DatepickerAsset extends AssetBundle
 {
@@ -21,11 +21,10 @@ class DatepickerAsset extends AssetBundle
 		'css/bootstrap-datepicker3.min.css',
 	];
 
-	public $jsOptions = ['position'=>\yii\web\view::POS_HEAD];
+	public $jsOptions  = ['position'=>\yii\web\view::POS_HEAD];
+	public $cssOptions = ['position'=>\yii\web\view::POS_HEAD];
 
     public $depends = [
 		'yii\web\JqueryAsset',
     ];
-
-
 }

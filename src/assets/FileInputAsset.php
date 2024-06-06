@@ -1,6 +1,5 @@
 <?php
 
-
 namespace gozoro\yii2\widgets\assets;
 
 use yii\web\AssetBundle;
@@ -21,11 +20,10 @@ class FileInputAsset extends AssetBundle
 		'file.input.css'
 	];
 
-	public $jsOptions = ['position'=>\yii\web\view::POS_HEAD];
+	public $jsOptions  = ['position'=>\yii\web\view::POS_HEAD];
+	public $cssOptions = ['position'=>\yii\web\view::POS_HEAD];
 
     public $depends = [
 
     ];
-
-
 }

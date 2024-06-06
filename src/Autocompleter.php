@@ -21,7 +21,7 @@ class Autocompleter extends BaseWidget
 
 		if(isset($this->attributes['items']))
 		{
-			$this->items = $this->attributes['items'];
+			$this->items = (array)$this->attributes['items'];
 			unset($this->attributes['items']);
 		}
 		else
