@@ -16,7 +16,8 @@
 		"yiisoft/yii2": "~2.0.0",
 		"bower-asset/bootstrap-datepicker": "^1.7",
 		"gozoro/yii2-helpers": "~1.0.0",
-		"gozoro/jquery-autocompleter": "~2.0.0"
+		"gozoro/jquery-autocompleter": "~2.0.0",
+		"gozoro/jquery-multiselect": "~1.0.0"
 
 	},
 	"autoload": {
