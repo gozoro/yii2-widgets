@@ -5,7 +5,6 @@ Yii2 widgets for Bootstrap 3.
 
 ## Datepicker
 
-Example of a simple datepicker:
 
 ```php
 <div style="width:200px;">
@@ -17,7 +16,8 @@ Example of a simple datepicker:
 | ![Example](https://raw.githubusercontent.com/gozoro/yii2-widgets/main/images/datepicker.gif) |
 |-|
 
-Example of datepicker with pick month:
+<details>
+<summary>Example of datepicker with pick month</summary>
 
 ```php
 <div style="width:200px;">
@@ -40,8 +40,10 @@ Example of datepicker with pick month:
 
 | ![Example](https://raw.githubusercontent.com/gozoro/yii2-widgets/main/images/datepicker2.gif) |
 |-|
+</details>
 
-Example of range datepicker:
+<details>
+<summary>Example of range datepicker</summary>
 
 ```php
 <div style="width:400px">
@@ -59,7 +61,7 @@ Example of range datepicker:
 
 | ![Example](https://raw.githubusercontent.com/gozoro/yii2-widgets/main/images/datepicker3.gif) |
 |-|
-
+</details>
 
 You can use any attributes allowed for input-tag in the widget configuration. 
 `clientOptions` is a special attribute for the jquery plugin options.
@@ -68,4 +70,102 @@ You can see full list of client options [here](https://bootstrap-datepicker.read
 
 -------
 
+## Autocompleter
 
+Autocompleter-widget based on jquery-plugin [gozoro/jquery-autocompleter](https://github.com/gozoro/jquery-autocompleter).
+
+```php
+<div style="width:400px">
+
+<?=Autocompleter::widget([
+	'name' => 'county',
+	'items' => [
+			"Afghanistan",
+			"Albania",
+			"Algeria",
+			"Andorra",
+			"Angola",
+			"Antigua and Barbuda",
+			"Argentina",
+			"Armenia",
+			"Australia",
+			"Austria",
+			"Azerbaijan"
+		],
+	'clientOptions'=>[
+		'value' => 'function(item, index){return index;}'
+		]
+])?>
+</div>
+```
+
+| ![Example](https://raw.githubusercontent.com/gozoro/yii2-widgets/main/images/autocompleter.gif) |
+|-|
+
+
+-------
+
+## Selector
+
+Selector-widget based on jquery-plugin [gozoro/jquery-autocompleter](https://github.com/gozoro/jquery-autocompleter).
+
+```php
+<div style="width:400px">
+
+<?=Selector::widget([
+	'name' => 'county',
+	'items' => [
+			"Afghanistan",
+			"Albania",
+			"Algeria",
+			"Andorra",
+			"Angola",
+			"Antigua and Barbuda",
+			"Argentina",
+			"Armenia",
+			"Australia",
+			"Austria",
+			"Azerbaijan"
+		],
+	'clientOptions'=>[
+		'value' => 'function(item, index){return index;}'
+		]
+])?>
+</div>
+```
+
+| ![Example](https://raw.githubusercontent.com/gozoro/yii2-widgets/main/images/selector.gif) |
+|-|
+
+-------
+
+## MultiSelector
+
+MultiSelector-widget based on jquery-plugin [gozoro/jquery-multiselect](https://github.com/gozoro/jquery-multiselect).
+
+```php
+<div style="width:400px">
+<?=MultiSelector::widget([
+	'name' => 'countries[]',
+	'items' => [
+		"Afghanistan",
+		"Albania",
+		"Algeria",
+		"Andorra",
+		"Angola",
+		"Antigua and Barbuda",
+		"Argentina",
+		"Armenia",
+		"Australia",
+		"Austria",
+		"Azerbaijan"
+	],
+
+	'selection' => [1,2],
+	'placeholder'=>'Enter countries',
+])?>
+</div>
+```
+
+| ![Example](https://raw.githubusercontent.com/gozoro/yii2-widgets/main/images/multiselector.gif) |
+|-|
