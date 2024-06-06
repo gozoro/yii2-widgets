@@ -9,6 +9,8 @@ use gozoro\yii2\helpers\Json;
 /**
  * Autocompleter widget based on gozoro/jquery-autocompleter.
  *
+ * See more info: https://github.com/gozoro/jquery-autocompleter
+ *
  * ```php
  * Autocompleter::widget([
  * 	'name' => 'county',

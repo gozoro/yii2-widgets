@@ -9,6 +9,7 @@ use gozoro\yii2\helpers\Json;
 /**
  * Multi selector widget based on gozoro/jquery-multiselect
  *
+ * See more info: https://github.com/gozoro/jquery-multiselect
  *
  * ```php
  * MultiSelector::widget([

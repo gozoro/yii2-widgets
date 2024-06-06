@@ -3,9 +3,6 @@
 namespace gozoro\yii2\widgets;
 
 use Yii;
-
-
-
 use gozoro\yii2\widgets\assets\DatepickerAsset;
 use gozoro\yii2\helpers\Json;
 
@@ -23,6 +20,7 @@ use gozoro\yii2\helpers\Json;
  * [
  *     'maxlength'    => 10,
  *     'autocomplete' => 'off',
+ *     'class'        => 'form-control'
  *     'clientOptions' => [
  *    	    'language'       => \Yii::$app->language,
  *  		'format'         => 'dd.mm.yyyy',

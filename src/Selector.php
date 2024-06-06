@@ -4,8 +4,10 @@ namespace gozoro\yii2\widgets;
 
 
 /**
- * Select with search input.
- * Selector::widget() based on Autocompleter::widget().
+ * Select with search input based on gozoro/jquery-autocompleter.
+ *
+ * See more info: https://github.com/gozoro/jquery-autocompleter/
+ *
  *
  * ```php
  * Selector::widget([
