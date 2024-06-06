@@ -5,7 +5,32 @@ namespace gozoro\yii2\widgets;
 use Yii;
 use app\widgets\assets\FileInputAsset;
 
-
+/**
+ * File input widget.
+ * Sets the file upload Bootstrap 3 button instead of the standard file input.
+ *
+ * ```php
+ * FileInput::widget([
+ * 		'name'=>'file',
+ * 		'accept'=>['jpg', 'png'],
+ * 		'multiple'=>true,
+ * 		'label' => 'Upload now!!!'
+ * ]
+ * );
+ * ```
+ *
+ * Default options:
+ * ```php
+ * [
+ * 		'type'                => 'button',
+ * 		'class'               => 'btn btn-default',
+ * 		'data-selected-class' => 'btn btn-success',
+ * 		'label'               => 'Upload',
+ * ]
+ *
+ * ```
+ *
+ */
 class FileInput extends BaseWidget
 {
 	public $widgetView = 'fileinput-bootstrap3';
@@ -18,7 +43,7 @@ class FileInput extends BaseWidget
 			'class'               => 'btn btn-default',
 			'data-selected-class' => 'btn btn-success',
 
-			'label'    => (Yii::$app->language == 'ru-RU') ? 'Прикрепить' : 'Attach a file',
+			'label'    => (Yii::$app->language == 'ru-RU') ? 'Прикрепить' : 'Upload',
 			'content'  => '<i class="glyphicon glyphicon-paperclip"></i> %LABEL% <span class="badge"></span>',
 			'input'    => ['id'=> uniqid('input'), 'class'=>'file-input-hidden'],
 			'filearea' => ['id'=> uniqid('filearea') , 'class'=> 'file-input-filearea'],
