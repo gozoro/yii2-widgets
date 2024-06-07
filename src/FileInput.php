@@ -3,7 +3,7 @@
 namespace gozoro\yii2\widgets;
 
 use Yii;
-use app\widgets\assets\FileInputAsset;
+use gozoro\yii2\widgets\assets\FileInputAsset;
 
 /**
  * File input widget.

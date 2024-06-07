@@ -3,7 +3,7 @@
 namespace gozoro\yii2\widgets;
 
 use Yii;
-use app\widgets\assets\MultiSelectorAsset;
+use gozoro\yii2\widgets\assets\MultiSelectorAsset;
 use gozoro\yii2\helpers\Json;
 
 /**
